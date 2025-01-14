@@ -129,17 +129,17 @@ function resetSessions() {
 }
 
 // Mute or unmute music
-// function toggleMusicMute() {
-//   isMusicMuted = !isMusicMuted;
-//   const muteButton = document.getElementById('muteMusicBtn');
-//   if (isMusicMuted) {
-//     lofiMusic.pause();
-//     muteButton.textContent = 'Bật Nhạc';
-//   } else {
-//     lofiMusic.play();
-//     muteButton.textContent = 'Tắt Nhạc';
-//   }
-// }
+function toggleMusicMute() {
+  isMusicMuted = !isMusicMuted;
+  const muteButton = document.getElementById('muteMusicBtn');
+  if (isMusicMuted) {
+    lofiMusic.pause();
+    muteButton.textContent = 'Bật Nhạc';
+  } else {
+    lofiMusic.play();
+    muteButton.textContent = 'Tắt Nhạc';
+  }
+}
 
 // Initialize Timer Based on Selection
 document.getElementById('timeSelect').addEventListener('change', () => {
@@ -157,7 +157,7 @@ document.getElementById('startBtn').addEventListener('click', startTimer);
 document.getElementById('pauseBtn').addEventListener('click', pauseTimer);
 document.getElementById('resetBtn').addEventListener('click', resetTimer);
 document.getElementById('resetSessionsBtn').addEventListener('click', resetSessions);
-// document.getElementById('muteMusicBtn').addEventListener('click', toggleMusicMute);
+document.getElementById('muteMusicBtn').addEventListener('click', toggleMusicMute);
 
 // Initialize the clock and timer
 updateClock();
